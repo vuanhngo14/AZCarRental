@@ -1,0 +1,313 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF5733;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo a {
+    text-decoration: none; 
+    color: #fff; 
+}
+
+.logo img {
+    padding-left: 10%;
+    max-width: 65px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    color: white; 
+    margin-right: 20px;
+}
+
+main {
+    display: flex; 
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* THUMBNAIL */
+
+.big-thumbnail {
+    position: relative;
+    text-align: center;
+}
+
+.big-thumbnail img {
+    max-width: 70%;
+    max-height: 70%; 
+    border-radius: 20px;
+}
+
+.thumbnail-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 10px; /* Add rounded corners for a better look */
+}
+
+.thumbnail-text h1 {
+    color: white; /* Text color */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail-text p {
+    color: white; /* Text color */
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* CAR LISTING */ 
+
+.car-listing {
+    padding-left: 3%; 
+    padding-right: 3%; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.car {
+    border-radius: 20px; 
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    height: 100%; 
+}
+
+.car h3 {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start; /* Align text to the top */
+    justify-content: center;
+}
+
+.car p {
+    color: black;
+    font-size: 1.2em;
+}
+
+.car button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    align-self: center; /* Center the button horizontally */
+    border-radius: 10px;
+}
+
+.car img{
+    max-width: 100%; 
+    height: 50%;
+    border-radius: 20px; 
+}
+
+/* STRENGTH */
+
+.strengths {
+    padding-left: 3%; 
+    padding-right: 3%; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.strength {
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.strength h3 {
+    font-size: 1.5em;
+}
+
+.strength p {
+    font-size: 1.2em;
+}
+
+#strength_label{
+    padding: 3%; 
+}
+
+/* OPTIONS */ 
+
+.options {
+    display: grid;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.option {
+    text-align: center;
+    cursor: pointer;
+    position: relative; /* Make the option container a positioning context */
+}
+
+.option img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block; /* Ensure the image takes up the entire space of the container */
+}
+
+.option h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+    position: absolute; /* Position the text absolutely */
+    top: 80%; /* Vertically center the text within the option */
+    left:50%; /* Horizontally center the text within the option */
+    transform: translate(-50%, -50%); /* Center the text precisely within the option */
+}
+
+.option:hover {
+    transform: scale(1.05); /* Scale up the option container on hover */
+}
+
+.option:hover img {
+    opacity: 0.7; /* Reduce the image opacity on hover */
+}
+
+.option:hover h3 {
+    opacity: 1; /* Show the text on hover */
+}
+
+/* ABOUT AZ CAR RENTAL */ 
+.about-azcarrental {
+    background-color: #FFDDC1; /* Light orange background */
+    padding-left: 3%; 
+    padding-right: 3%; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1; /* Left side for the image */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px; /* Rounded corners for the image */
+}
+
+.about-text {
+    flex: 2; /* Right side for text description */
+    padding: 20px; /* Add some padding around the text */
+}
+
+.about-text h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+
+/* FOOTER */ 
+
+footer {
+    background-color: #FF5733;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.contact-info,
+.social-links,
+.newsletter,
+.quick-links {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h4,
+.social-links h4,
+.newsletter h4,
+.quick-links h4 {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+input[type="email"] {
+    border-radius: 20px; 
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.newsletter button{
+    border-radius: 20px; 
+}
+
+/* Add more styles to format the social links and newsletter input/button as needed */
+
+
+/* Use vw units for responsive font size */
+@media screen and (max-width: 768px) {
+    .thumbnail-text h1 {
+        font-size: 5vw;
+    }
+
+    .thumbnail-text p {
+        font-size: 3vw;
+    }
+}
+
+
+
+
+
