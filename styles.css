@@ -191,18 +191,18 @@ main {
     font-size: 1.2em;
     color: #333;
     margin-top: 10px;
-    position: absolute; /* Position the text absolutely */
-    top: 80%; /* Vertically center the text within the option */
-    left:50%; /* Horizontally center the text within the option */
-    transform: translate(-50%, -50%); /* Center the text precisely within the option */
+    position: absolute; 
+    top: 80%; 
+    left:50%; 
+    transform: translate(-50%, -50%);
 }
 
 .option:hover {
-    transform: scale(1.05); /* Scale up the option container on hover */
+    transform: scale(1.05);
 }
 
 .option:hover img {
-    opacity: 0.7; /* Reduce the image opacity on hover */
+    opacity: 0.7; 
 }
 
 .option:hover h3 {
@@ -211,7 +211,7 @@ main {
 
 /* ABOUT AZ CAR RENTAL */ 
 .about-azcarrental {
-    background-color: #FFDDC1; /* Light orange background */
+    background-color: #FFDDC1; 
     padding-left: 3%; 
     padding-right: 3%; 
     width: 100%;
@@ -220,19 +220,21 @@ main {
 }
 
 .about-image {
-    flex: 1; /* Left side for the image */
+    flex: 1; 
+    margin-right: 20px;
 }
 
 .about-image img {
+    padding: 10px; 
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 20px; /* Rounded corners for the image */
+    border-radius: 20px;
 }
 
 .about-text {
-    flex: 2; /* Right side for text description */
-    padding: 20px; /* Add some padding around the text */
+    flex: 2; 
+    padding: 20px; 
 }
 
 .about-text h3 {
@@ -249,6 +251,11 @@ main {
 
 /* FOOTER */ 
 
+.footer-column {
+    flex: 1;
+    text-align: left;
+}
+
 footer {
     background-color: #FF5733;
     color: #fff;
@@ -259,11 +266,9 @@ footer {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 50px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .contact-info,
@@ -279,21 +284,58 @@ footer {
 .newsletter h4,
 .quick-links h4 {
     color: #fff;
+    font-size: 1.2em; 
+}
+
+.social-links a{
+    padding-bottom: 10px;
+}
+
+.social-links a i {
+    font-size: 20px; /* Adjust the icon size */
+    margin-right: 10px; /* Add space between the icon and text */
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333; 
+}
+
+.social-links a:hover {
+    color: #007bff; /* Adjust the link text color on hover */
+}
+
+
+
+.certificates {
+    margin-top: 20px; /* Add space between social links and certificates */
+}
+
+.certificates h4 {
     font-size: 1.2em;
+    color: white;
 }
 
-input[type="email"] {
-    border-radius: 20px; 
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+.certificate {
+    display: inline-block; 
+    margin-right: 20px; 
 }
 
-.newsletter button{
-    border-radius: 20px; 
+.certificate:last-child {
+    margin-right: 0; /* Remove right margin for the last certificate */
 }
 
-/* Add more styles to format the social links and newsletter input/button as needed */
+.certificate a {
+    display: block;
+}
+
+.certificate img {
+    max-width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+   
+}
+
 
 
 /* Use vw units for responsive font size */
