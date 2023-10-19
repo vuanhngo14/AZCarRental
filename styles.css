@@ -33,7 +33,8 @@ nav ul {
 
 nav li {
     color: white; 
-    margin-right: 20px;
+    margin-right: 50px;
+    font-size: 20px;
 }
 
 main {
@@ -211,6 +212,7 @@ main {
 
 /* ABOUT AZ CAR RENTAL */ 
 .about-azcarrental {
+    margin-top: 3%; 
     background-color: #FFDDC1; 
     padding-left: 3%; 
     padding-right: 3%; 
