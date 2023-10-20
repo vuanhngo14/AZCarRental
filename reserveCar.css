@@ -44,6 +44,55 @@ main {
     justify-content: center;
 }
 
+/* CAR LISTING */ 
+
+.car-listing {
+    padding-left: 3%; 
+    padding-right: 3%; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.car {
+    border-radius: 20px; 
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    height: 100%; 
+}
+
+.car h3 {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start; /* Align text to the top */
+    justify-content: center;
+}
+
+.car p {
+    color: black;
+    font-size: 1.2em;
+}
+
+.car button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    align-self: center; /* Center the button horizontally */
+    border-radius: 10px;
+}
+
+.car img{
+    max-width: 100%; 
+    height: 50%;
+    border-radius: 20px; 
+}
+
 /* FOOTER */ 
 
 .footer-column {
