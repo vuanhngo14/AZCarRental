@@ -15,6 +15,15 @@ header {
     text-decoration: none;
 }
 
+header a{
+    text-decoration: none;
+    color: white; 
+}
+
+header a:hover{
+    color: black;
+}
+
 .logo a {
     text-decoration: none; 
     color: #fff; 
@@ -64,21 +73,19 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 20px; /* Adjust padding as needed */
-    border-radius: 10px; /* Add rounded corners for a better look */
+    padding: 20px; 
 }
 
 .thumbnail-text h1 {
     color: white; /* Text color */
     font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 5px black;
 }
 
 .thumbnail-text p {
     color: white; /* Text color */
     font-size: 1.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 5px black;
 }
 
 /* CAR LISTING */ 
