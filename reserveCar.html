@@ -24,50 +24,41 @@
 
     <main>
 
+        <!-- FILTER CARS -->
+        <div class="filter-menu">
+            <div>
+                <label for="filter-make">Car Model:</label>
+                <select id="filter-make">
+                    <option value="all">All</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="honda">Honda</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+        
+            <div>
+                <label for="filter-price">Price Range:</label>
+                <select id="filter-price">
+                    <option value="all">All</option>
+                    <option value="200">Less than $200/ day</option>
+                    <option value="300">Less than $300/ day</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <div>
+                <label for="start-date">Start Date: </label>
+                <input type="datetime-local" id="start-date" name="start-date">
+                <span>to</span>
+                <label for="end-date"> End Date:  </label>
+                <input type="datetime-local" id="end-date" name="end-date">
+            </div>
+        </div>
+
         <!-- CAR LISTING -->
         <h2 id="promoText">AVAILABLE CARS </h2>
         <section class="car-listing">
-            <div class="car">
-                <img src="img/roadster.jpeg" alt="Car 1">
-                <h3>Tesla Roadster</h3>
-                <p>Price: $300/day</p>
-                <button>Book Now</button>
-            </div>
 
-            <div class="car">
-                <img src="img/modelX.webp" alt="Car 2">
-                <h3>Tesla Model X</h3>
-                <p>Price: $250/day</p>
-                <button>Book Now</button>
-            </div>
-
-            <div class="car">
-                <img src="img/modelSPlaid.jpeg" alt="Car 3">
-                <h3>Tesla Model S Plaid</h3>
-                <p>Price: $250/day</p>
-                <button>Book Now</button>
-            </div>
-
-            <div class="car">
-                <img src="img/modelS.jpeg" alt="Car 4">
-                <h3>Tesla Model S</h3>
-                <p>Price: $200/day</p>
-                <button>Book Now</button>
-            </div>
-
-            <div class="car">
-                <img src="img/model3.jpeg" alt="Car 4">
-                <h3>Tesla Model 3</h3>
-                <p>Price: $150/day</p>
-                <button>Book Now</button>
-            </div>
-
-            <div class="car">
-                <img src="img/modely.jpeg" alt="Car 4">
-                <h3>Tesla Model Y</h3>
-                <p>Price: $100/day</p>
-                <button>Book Now</button>
-            </div>
 
         </section>
 
@@ -130,5 +121,8 @@
         <p>&copy; 2023 AZCarRental</p>
     </footer>
     
+
+    <script src="reserveCar.js"></script>
+
 </body>
 </html>

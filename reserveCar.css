@@ -44,6 +44,42 @@ main {
     justify-content: center;
 }
 
+/* FILTER CARS */ 
+
+.filter-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.filter-menu label{
+    font-weight: bold;
+}
+
+.filter-menu div {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.filter-menu label {
+    margin-right: 5px;
+}
+
+.filter-menu select {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    width: 100%;
+    outline: none;
+}
+
+
+
+
 /* CAR LISTING */ 
 
 .car-listing {
