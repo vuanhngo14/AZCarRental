@@ -32,7 +32,7 @@
                     <option value="all">All</option>
                     <option value="toyota">Toyota</option>
                     <option value="honda">Honda</option>
-                    <!-- Add more options as needed -->
+                    <option value="tesla">Tesla</option>
                 </select>
             </div>
         
@@ -42,16 +42,15 @@
                     <option value="all">All</option>
                     <option value="200">Less than $200/ day</option>
                     <option value="300">Less than $300/ day</option>
-                    <!-- Add more options as needed -->
+                    <option value="400">Less than $400/ day</option>
                 </select>
             </div>
-
             <div>
-                <label for="start-date">Start Date: </label>
-                <input type="datetime-local" id="start-date" name="start-date">
-                <span>to</span>
-                <label for="end-date"> End Date:  </label>
-                <input type="datetime-local" id="end-date" name="end-date">
+                <label for="sort-price">Sort by Price:</label>
+                <select id="sort-price">
+                    <option value="low-to-high">Low to High</option>
+                    <option value="high-to-low">High to Low</option>
+                </select>
             </div>
         </div>
 
