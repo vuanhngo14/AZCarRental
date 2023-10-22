@@ -16,17 +16,25 @@ function loadCarData() {
 // Function to render car cards based on data
 function renderCars(cars) {
     const carList = document.getElementById('car');
-    const makeFilter = document.getElementById('filter-make').value;
-    const priceFilter = parseInt(document.getElementById('filter-price').value);
+    const makeFilter = document.getElementById('filter-make');
+    const priceFilter = document.getElementById('filter-price');
+    const sortPrice = document.getElementById('sort-price');
 
+    // Clear the existing car listings
     carList.innerHTML = '';
 
+    const filteredCars = cars.filter((car) => (
+        (makeFilter.value === 'all' || car.make.toLowerCase() === makeFilter.value) &&
+        (priceFilter.value === 'all' || car.price <= parseInt(priceFilter.value))
+    ));
 
-    cars.forEach((car) => {
-        if (
-            (makeFilter === 'all' || car.make.toLowerCase() === makeFilter) &&
-            (priceFilter === 0 || car.price <= priceFilter)
-        ) {
+    if (sortPrice.value === 'low-to-high') {
+        filteredCars.sort((a, b) => a.price - b.price);
+    } else if (sortPrice.value === 'high-to-low') {
+        filteredCars.sort((a, b) => b.price - a.price);
+    }
+
+    filteredCars.forEach((car) => {
         const carCard = document.createElement('div');
         carCard.classList.add('car');
         carCard.innerHTML = `
@@ -36,7 +44,6 @@ function renderCars(cars) {
             <button>Book Now</button>
         `;
         carList.appendChild(carCard);
-        }
     });
 }
 
@@ -49,5 +56,9 @@ document.getElementById('filter-make').addEventListener('change', () => {
 });
 
 document.getElementById('filter-price').addEventListener('change', () => {
+    renderCars(cars);
+});
+
+document.getElementById('sort-price').addEventListener('change', () => {
     renderCars(cars);
 });
