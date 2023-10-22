@@ -10,12 +10,14 @@
     
     <header>
         <div class="logo">
-            <img src="img/azLogo.jpg" alt="AZCarRental Logo">
+            <a href="index.html">
+                <img src="img/azLogo.jpg" alt="AZCarRental Logo">
+            </a>
         </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Cars</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#knowMore">Cars</a></li> <!--currently not working-->
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -24,50 +26,41 @@
 
     <main>
 
+        <!-- FILTER CARS -->
+        <div class="filter-menu">
+            <div>
+                <label for="filter-make">Car Model:</label>
+                <select id="filter-make">
+                    <option value="all">All</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="honda">Honda</option>
+                    <option value="tesla">Tesla</option>
+                </select>
+            </div>
+        
+            <div>
+                <label for="filter-price">Price Range:</label>
+                <select id="filter-price">
+                    <option value="all">All</option>
+                    <option value="200">Less than $200/ day</option>
+                    <option value="300">Less than $300/ day</option>
+                    <option value="400">Less than $400/ day</option>
+                </select>
+            </div>
+            <div>
+                <label for="sort-price">Sort by Price:</label>
+                <select id="sort-price">
+                    <option value="low-to-high">Low to High</option>
+                    <option value="high-to-low">High to Low</option>
+                </select>
+            </div>
+        </div>
+
         <!-- CAR LISTING -->
         <h2 id="promoText">AVAILABLE CARS </h2>
-        <section class="car-listing">
-            <div class="car">
-                <img src="img/roadster.jpeg" alt="Car 1">
-                <h3>Tesla Roadster</h3>
-                <p>Price: $300/day</p>
-                <button>Book Now</button>
-            </div>
+        <section class="car-listing" id="car">
 
-            <div class="car">
-                <img src="img/modelX.webp" alt="Car 2">
-                <h3>Tesla Model X</h3>
-                <p>Price: $250/day</p>
-                <button>Book Now</button>
-            </div>
-
-            <div class="car">
-                <img src="img/modelSPlaid.jpeg" alt="Car 3">
-                <h3>Tesla Model S Plaid</h3>
-                <p>Price: $250/day</p>
-                <button>Book Now</button>
-            </div>
-
-            <div class="car">
-                <img src="img/modelS.jpeg" alt="Car 4">
-                <h3>Tesla Model S</h3>
-                <p>Price: $200/day</p>
-                <button>Book Now</button>
-            </div>
-
-            <div class="car">
-                <img src="img/model3.jpeg" alt="Car 4">
-                <h3>Tesla Model 3</h3>
-                <p>Price: $150/day</p>
-                <button>Book Now</button>
-            </div>
-
-            <div class="car">
-                <img src="img/modely.jpeg" alt="Car 4">
-                <h3>Tesla Model Y</h3>
-                <p>Price: $100/day</p>
-                <button>Book Now</button>
-            </div>
+            <!-- CARS WILL BE LOADED HERE DEPENDS ON THE FILTER -->
 
         </section>
 
@@ -79,7 +72,9 @@
         <div class="footer-content">
             <div class="footer-column">
                 <div class="logo">
-                    <img src="img/azLogo.jpg" alt="AZCarRental Logo">
+                    <a href="index.html">
+                        <img src="img/azLogo.jpg" alt="AZCarRental Logo">
+                    </a>
                 </div>
                 <div class="contact-info">
                     <h4>Contact Us</h4>
@@ -130,5 +125,8 @@
         <p>&copy; 2023 AZCarRental</p>
     </footer>
     
+
+    <script src="reserveCar.js"></script>
+
 </body>
 </html>

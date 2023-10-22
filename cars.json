@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "make": "Tesla",
+        "model": "Roadster",
+        "price": 300,
+        "image": "img/roadster.jpeg"
+    },
+    {
+        "id": 2,
+        "make": "Tesla",
+        "model": "Model X",
+        "price": 250,
+        "image": "img/modelX.webp"
+    },
+    {
+        "id": 3,
+        "make": "Tesla",
+        "model": "Model S Plaid",
+        "price": 250,
+        "image": "img/modelSPlaid.jpeg"
+    },
+    {
+        "id": 4,
+        "make": "Tesla",
+        "model": "Model S",
+        "price": 200,
+        "image": "img/modelS.jpeg"
+    },
+    {
+        "id": 5,
+        "make": "Tesla",
+        "model": "Model 3",
+        "price": 150,
+        "image": "img/model3.jpeg"
+    },
+    {
+        "id": 6,
+        "make": "Tesla",
+        "model": "Model Y",
+        "price": 100,
+        "image": "img/modely.jpeg"
+    } 
+    
+]
