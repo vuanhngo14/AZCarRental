@@ -185,7 +185,9 @@ main {
 .option {
     text-align: center;
     cursor: pointer;
-    position: relative; /* Make the option container a positioning context */
+    position: relative;
+    border: 0.5px solid #ddd; 
+    border-radius: 20px;
 }
 
 .option img {
