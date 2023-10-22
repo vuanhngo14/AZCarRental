@@ -40,6 +40,112 @@
         "model": "Model Y",
         "price": 100,
         "image": "img/modely.jpeg"
-    } 
+    }, 
+    {
+        "id": 7,
+        "make": "Toyota",
+        "model": "Camry",
+        "price": 180,
+        "image": "img/camry.jpg"
+    },
+    {
+        "id": 8,
+        "make": "Honda",
+        "model": "Civic",
+        "price": 220,
+        "image": "img/civic.jpg"
+    },
+    {
+        "id": 9,
+        "make": "Toyota",
+        "model": "Corolla",
+        "price": 175,
+        "image": "img/corolla.jpg"
+    },
+    {
+        "id": 10,
+        "make": "Honda",
+        "model": "Accord",
+        "price": 190,
+        "image": "img/accord.jpg"
+    },
+    {
+        "id": 11,
+        "make": "Ford",
+        "model": "Mustang",
+        "price": 380,
+        "image": "img/mustang.jpg"
+    },
+    {
+        "id": 12,
+        "make": "Nissan",
+        "model": "Altima",
+        "price": 180,
+        "image": "img/altima.avif"
+    },
+    {
+        "id": 14,
+        "make": "Volkswagen",
+        "model": "Passat",
+        "price": 190,
+        "image": "img/passat.jpg"
+    },
+    {
+        "id": 15,
+        "make": "BMW",
+        "model": "3 Series",
+        "price": 300,
+        "image": "img/3series.webp"
+    },
+    {
+        "id": 16,
+        "make": "Mercedes",
+        "model": "C-Class",
+        "price": 240,
+        "image": "img/benzc.jpg"
+    },
+    {
+        "id": 17,
+        "make": "Audi",
+        "model": "A4",
+        "price": 230,
+        "image": "img/a4.webp"
+    },
+    {
+        "id": 18,
+        "make": "Lexus",
+        "model": "ES",
+        "price": 220,
+        "image": "img/lexuses.jpg"
+    },
+    {
+        "id": 19,
+        "make": "Mercedes",
+        "model": "GLA",
+        "price": 280,
+        "image": "img/gla.jpg"
+    },
+    {
+        "id": 20,
+        "make": "Mercedes",
+        "model": "GLC",
+        "price": 320,
+        "image": "img/glc.jpg"
+    },
+    {
+        "id": 21,
+        "make": "Mercedes",
+        "model": "GLE",
+        "price": 350,
+        "image": "img/gle.jpg"
+    },
+    {
+        "id": 22,
+        "make": "Mercedes",
+        "model": "E Class",
+        "price": 320,
+        "image": "img/e-class.jpeg"
+    }
+    
     
 ]
