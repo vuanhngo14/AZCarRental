@@ -11,7 +11,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header a{
     text-decoration: none;
+    color: white; 
+}
+
+header a:hover{
+    color: black;
 }
 
 .logo a {
@@ -76,8 +84,6 @@ main {
     width: 100%;
     outline: none;
 }
-
-
 
 
 /* CAR LISTING */ 
