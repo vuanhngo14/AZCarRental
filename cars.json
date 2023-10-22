@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "make": "Tesla",
+        "model": "Roadster",
+        "price": 300,
+        "image": "img/roadster.jpeg"
+    },
+    {
+        "id": 2,
+        "make": "Tesla",
+        "model": "Model X",
+        "price": 250,
+        "image": "img/modelX.webp"
+    }
+]
