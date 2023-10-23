@@ -76,7 +76,6 @@ main {
 .car-info {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 20px;
 }
 
@@ -93,8 +92,10 @@ main {
 }
 
 .car-description {
+    max-width: 40%;
     flex: 2;
     text-align: left;
+
 }
 
 .car-description h2 {
@@ -109,48 +110,48 @@ main {
 /* STYLING FOR RESERVATION FORM */
 
 .contact-details {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
     border-radius: 10px;
     margin: 20px;
-    padding: 20px;
-    
+    padding: 10px;
 
+    display: flex; 
+    justify-content: center;
+    
 }
 
-/* Style for headings */
 .contact-details h2 {
     font-size: 20px;
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Style for labels */
 .contact-details label {
-    display: block;
+
     color: #333;
     font-weight: bold;
     margin-bottom: 10px;
+
+    width: 20%;
+    text-align: left;
+    align-items: center;
 }
 
-/* Style for input fields */
+
 .contact-details input {
-    width: 100%;
+    width: 50%;
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
 }
 
-/* Style for the button */
 .contact-details button {
     background-color: #FF5733;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 20px;
     cursor: pointer;
 }
 
