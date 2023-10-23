@@ -41,7 +41,7 @@ function renderCars(cars) {
             <img src="${car.image}" alt="${car.model}">
             <h3>${car.make} ${car.model}</h3>
             <p>Price: $${car.price}/day</p>
-            <button>Book Now</button>
+            <button data-id="${car.id}" class="book-now-button">Book Now</button>
         `;
         carList.appendChild(carCard);
     });
@@ -62,3 +62,14 @@ document.getElementById('filter-price').addEventListener('change', () => {
 document.getElementById('sort-price').addEventListener('change', () => {
     renderCars(cars);
 });
+
+// EVENT FOR BUTTON 
+
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("book-now-button")) {
+        const carId = e.target.getAttribute("data-id");
+
+        window.location.href = `reserveCarPayment.html?id=${carId}`;
+    }
+});
+

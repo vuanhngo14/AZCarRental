@@ -1,9 +1,13 @@
+
+/* OVERALL */ 
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* HEADER */ 
 header {
     background-color: #FF5733;
     color: #fff;
@@ -11,6 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-decoration: none;
 }
 
 header a{
@@ -52,90 +57,106 @@ main {
     justify-content: center;
 }
 
-/* FILTER CARS */ 
+/* CAR DETAILS AND RESERVATION SECTION */ 
 
-.filter-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid #ccc;
+
+.car-details {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
     border-radius: 20px;
-    padding: 10px;
-}
-
-.filter-menu label{
-    font-weight: bold;
-}
-
-.filter-menu div {
-    flex: 1;
-    margin: 0 5px;
-}
-
-.filter-menu label {
-    margin-right: 5px;
-}
-
-.filter-menu select {
-    padding: 5px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    background: transparent;
-    width: 100%;
-    outline: none;
-}
-
-
-/* CAR LISTING */ 
-
-.car-listing {
-    padding-left: 3%; 
-    padding-right: 3%; 
-    padding-top: 10px; 
-    padding-bottom: 10px; 
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.car {
-    border-radius: 20px; 
-    border: 1px solid #ddd;
-    padding: 10px;
     text-align: center;
-    height: 100%; 
 }
 
-.car h3 {
-    flex-grow: 1;
+.car-details h1 {
+    color: #333;
+}
+
+.car-info {
     display: flex;
-    align-items: flex-start; /* Align text to the top */
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.car p {
-    color: black;
-    font-size: 1.2em;
+.car-image {
+    flex: 1;
+    margin: 10px;
 }
 
-.car button {
-    background-color: #333;
+.car-image img {
+    width: 700px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.car-description {
+    flex: 2;
+    text-align: left;
+}
+
+.car-description h2 {
+    color: #333;
+}
+
+.car-description p {
+    color: #666;
+    margin: 5px 0;
+}
+
+/* STYLING FOR RESERVATION FORM */
+
+.contact-details {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    
+
+}
+
+/* Style for headings */
+.contact-details h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style for labels */
+.contact-details label {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style for input fields */
+.contact-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Style for the button */
+.contact-details button {
+    background-color: #FF5733;
     color: white;
     border: none;
     padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
     cursor: pointer;
-    font-size: 1.2em;
-    align-self: center; /* Center the button horizontally */
-    border-radius: 10px;
 }
 
-
-.car img{
-    max-width: 100%; 
-    height: 50%;
-    border-radius: 20px; 
+.contact-details button:hover {
+    background-color: #FF381E;
 }
-
 
 /* FOOTER */ 
 
