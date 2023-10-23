@@ -15,3 +15,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+// Get all buttons with the class 'direct_toCars'
+const buttons = document.querySelectorAll('.direct_toCars');
+
+// Add an event listener to each button
+buttons.forEach((button) => {
+    button.addEventListener('click', function () {
+        const url = "reserveCar.html"
+        
+        // Redirect to the URL when the button is clicked
+        window.location.href = url;
+    });
+});
