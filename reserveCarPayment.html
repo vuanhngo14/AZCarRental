@@ -17,9 +17,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#knowMore">Cars</a></li> <!--currently not working-->
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="reserveCar.html">Cars</a></li> 
+                <li><a href="index.html#knowMore">About Us</a></li>
+                <li><a href="index.html#knowMore">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -37,8 +37,12 @@
                 </div>
                 <div class="car-description">
                     <h2>Car Make & Model</h2>
-                    <p>Price: $XXX/day</p>
-                    <p>Additional car details go here.</p>
+                    <p style="font-size: larger; margin-bottom: 10px;">Price: $XXX/day</p>
+                    <br/>
+                    <p>At AZ Car Rentals, we take pride in providing you with high-quality vehicles that are meticulously maintained and regularly inspected to ensure your safety and satisfaction. Our cars undergo frequent check-ups and maintenance to keep them in excellent condition, so you can enjoy a worry-free driving experience. Your safety and comfort are our top priorities, and we're committed to delivering the best car rental service in the business.</p>
+                    <br/>
+                    <p>For more details about car conditions, <a href="index.html#knowMore">contact us!</a></p>
+
                 </div>
             </div>
 
@@ -52,36 +56,34 @@
                     </div>
 
                     <div class="contact-details">
-                        <div class="contact">
                             <label for="contact-number">Contact Number:</label>
                             <input type="tel" id="contact-number" name="contact-number" placeholder="123-456-7890" required>
-                        </div>
-
-                        <div class="email">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
-                        </div>
                     </div>
 
                     <div class="contact-details">
-                        <label for="credit-card">Credit Card Information:</label>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+                    </div>
+
+                    <div class="contact-details">
+                        <label for="credit-card">Credit Card:</label>
                         <input type="text" id="credit-card" name="credit-card" placeholder="**** **** **** ****" required>
                     </div>
 
                     <div class="contact-details">
-                        <div>
                             <label for="expiration-date">Expiration Date:</label>
                             <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YYYY">
-                        </div>
-
-                        <div class="cvv">
-                            <label for="cvv">CVV:</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="CVV">
-                    
-                        </div>
                     </div>
 
-                    <button type="submit">Reserve Now</button>
+                    <div class="contact-details">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                    </div>
+                    
+                    <div class="contact-details">
+                        <button type="submit">Reserve Now</button>
+                    </div>
+
                 </form>
             </div>
 
