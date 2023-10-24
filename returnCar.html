@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Admin Page</title>
-    <link rel="stylesheet" type="text/css" href="admin.css">
+    <title>Return Car</title>
+    <link rel="stylesheet" type="text/css" href="returnCar.css">
     <script src="https://kit.fontawesome.com/0c50f17dc4.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -26,6 +26,57 @@
 
     <main>
 
+        <!-- Main part -->
+
+        
+        <!-- Choosing car details -->
+        <div class="car-details">
+            <div class="reservation-form">
+                <h2>User Details</h2>
+                <form id="rental-form">
+                    
+                    <div class="contact-details">
+                            <label for="full-name">Full Name: </label>
+                            <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="contact-details">
+                            <label for="contact-number">Contact Number:</label>
+                            <input type="tel" id="contact-number" name="contact-number" placeholder="123-456-7890" required>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <button type="submit">Reserve Now</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="list-rented-car">
+            <div class="rented-car">
+                <div class="show-details">
+                    <p>Car ID: </p>
+                    <p>Name: </p>
+                    <p>Total Price: </p>
+                </div>
+                <div class="show-buttons">
+                    
+                </div>
+            </div>
+
+            <div class="rented-car">
+                <div class="show-details">
+                    <p>Car ID: </p>
+                    <p>Name: </p>
+                    <p>Total Price: </p>
+                </div>
+                <div class="show-buttons">
+                    
+                </div>
+            </div>
+            
+        </div>
 
     </main>
 
@@ -87,7 +138,7 @@
         <p>&copy; 2023 AZCarRental</p>
     </footer>
 
-    <script src="admin.js"></script>
+    <script src="returnCar.js"></script>
 
 </body>
 </html>

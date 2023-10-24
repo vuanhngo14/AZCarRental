@@ -90,6 +90,18 @@ main {
 
 /* CAR LISTING */ 
 
+.list-rented-car {
+
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    height: auto;
+
+}
+
+
 .car-listing {
     padding-left: 3%; 
     padding-right: 3%; 
