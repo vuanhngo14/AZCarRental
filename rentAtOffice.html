@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AZCarRental</title>
+    <link rel="stylesheet" type="text/css" href="rentAtOffice.css">
+    <script src="https://kit.fontawesome.com/0c50f17dc4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/azLogo.jpg" alt="AZCarRental Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reserveCar.html">Cars</a></li> 
+                <li><a href="index.html#knowMore">About Us</a></li>
+                <li><a href="index.html#knowMore">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- MAIN PART OF HTML FILE -->
+
+        <div class="car-details">
+
+            <div class="reservation-form">
+                <h2>Car Selection (Office Use)</h2>
+                <form>
+
+                    <div class="contact-details">
+                        <label for="car-id">Car ID</label>
+                        <input type="text" id="car-id" name="car-id" placeholder="1">
+                    </div>
+
+                    <div class="contact-details">
+                        <label for="rental-price">Rental Price</label>
+                        <input type="text" id="rental-price" name="rental-price" placeholder="200">
+                    </div>
+                    
+                    <div class="contact-details">
+                            <label for="full-name">Full Name: </label>
+                            <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="contact-details">
+                            <label for="contact-number">Contact Number:</label>
+                            <input type="tel" id="contact-number" name="contact-number" placeholder="123-456-7890" required>
+                    </div>
+
+                    <div class="contact-details">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+                    </div>
+
+                    <div class="contact-details">
+                        <label for="credit-card">Credit Card:</label>
+                        <input type="text" id="credit-card" name="credit-card" placeholder="**** **** **** ****" required>
+                    </div>
+
+                    <div class="contact-details">
+                            <label for="expiration-date">Expiration Date:</label>
+                            <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YYYY">
+                    </div>
+
+                    <div class="contact-details">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                    </div>
+                    
+                    <div class="contact-details">
+                        <button type="submit">Reserve Now</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/azLogo.jpg" alt="AZCarRental Logo">
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <h4>Contact Us</h4>
+                    <p>Email: contact@azcarrental.com</p>
+                    <p>Phone: +65 8883 6627</p>
+                    <br/>
+                    <h4>General Enquiry</h4>
+                    <p>Email: info@azcarrental.com</p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="social-links">
+                    <h4>Follow Us</h4>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <br/>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <br/>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+                <div class="certificates">
+                    <h4>Countries</h4>
+                    <div class="certificate">
+                        <img src="img/vietnam_flag.png" alt="Certificate 1">
+                    </div>
+                    <div class="certificate">
+                        <img src="img/singapore_flag.svg" alt="Certificate 2">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="address">
+                    <h4>Our Address</h4>
+                    <p>461 Clementi Rd, Singapore 599491</p>
+                    <p>Singapore</p>
+                </div>
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-123.456789!3d12.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMTLCsDEwJzU5LjEiTiAxMjPCsDA1JzA3LjkiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2023 AZCarRental</p>
+    </footer>
+    
+    <script src="rentAtOffice.js"></script>
+
+</body>
+</html>
