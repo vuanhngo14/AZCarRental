@@ -1,0 +1,203 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF5733;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+header a{
+    text-decoration: none;
+    color: white; 
+}
+
+header a:hover{
+    color: black;
+}
+
+.logo a {
+    text-decoration: none; 
+    color: #fff; 
+}
+
+.logo img {
+    padding-left: 10%;
+    max-width: 65px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    color: white; 
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+main {
+    display: flex; 
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* STYLING FOR LIST OF RENTED CARS */
+
+.list-rented-car{
+    width: 70%;
+    height: auto; 
+}
+
+.rented-car {
+    border: 1px solid #ccc;
+    padding-left: 5%; 
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-details > p{
+    font-weight: bold;
+}
+
+.show-details > span {
+    font-weight: lighter;
+}
+
+.show-details {
+    flex: 1;
+    padding: 10px; 
+}
+
+.show-buttons {
+    padding-right: 3%;
+    
+}
+
+.show-buttons > button {
+
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+
+
+
+/* FOOTER */ 
+
+.footer-column {
+    flex: 1;
+    text-align: left;
+}
+
+footer {
+    background-color: #FF5733;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-info,
+.social-links,
+.newsletter,
+.quick-links {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h4,
+.social-links h4,
+.newsletter h4,
+.quick-links h4 {
+    color: #fff;
+    font-size: 1.2em; 
+}
+
+.social-links a{
+    padding-bottom: 10px;
+}
+
+.social-links a i {
+    font-size: 20px; /* Adjust the icon size */
+    margin-right: 10px; /* Add space between the icon and text */
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333; 
+}
+
+.social-links a:hover {
+    color: #007bff; /* Adjust the link text color on hover */
+}
+
+
+
+.certificates {
+    margin-top: 20px; /* Add space between social links and certificates */
+}
+
+.certificates h4 {
+    font-size: 1.2em;
+    color: white;
+}
+
+.certificate {
+    display: inline-block; 
+    margin-right: 20px; 
+}
+
+.certificate:last-child {
+    margin-right: 0; /* Remove right margin for the last certificate */
+}
+
+.certificate a {
+    display: block;
+}
+
+.certificate img {
+    max-width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+   
+}
+
+
+
+/* Use vw units for responsive font size */
+@media screen and (max-width: 768px) {
+    .thumbnail-text h1 {
+        font-size: 5vw;
+    }
+
+    .thumbnail-text p {
+        font-size: 3vw;
+    }
+}
