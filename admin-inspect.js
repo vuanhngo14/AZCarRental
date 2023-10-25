@@ -13,23 +13,18 @@ function loadCarData() {
         });
 }
 
-function collectNames() {
+function getFromLocalStorage() {
 
     event.preventDefault();
 
-    const fullName = document.getElementById('full-name').value;
-    const contactNumber = document.getElementById('contact-number').value;
-
-    console.log(fullName); 
-    console.log(contactNumber); 
-
-    const rentalData = JSON.parse(localStorage.getItem('rentalData')) || [];
-
-    const foundRentals = rentalData.filter((entry) => entry.fullName === fullName && entry.contactNumber === contactNumber);
-    matchingRentals = foundRentals; 
-
+    matchingRentals = JSON.parse(localStorage.getItem('returnedCar')) || [];
     displayCarData();
 }
+
+
+const testButton = document.getElementById('test-button');
+testButton.addEventListener('click', reloadRentedCars); 
+testButton.addEventListener('click', getFromLocalStorage); 
 
 function displayCarData() {
     if (matchingRentals.length === 0) {
@@ -42,10 +37,8 @@ function displayCarData() {
 
             // Initiate counter for button ID
             counter +=1; 
-            console.log(counter); 
 
             const carIdInt = parseInt(entry.carId, 10); 
-
             const matchingCar = cars.find((car) => car.id === carIdInt);
 
             if (matchingCar) {
@@ -118,7 +111,7 @@ function displayCarData() {
                     const clickedButtonId = this.id;
                     returnCar(clickedButtonId); 
                 };               
-                returnCarButton.textContent = 'Return car';
+                returnCarButton.textContent = 'Inspected - No issues';
 
                 // Append the elements to rentedCarDiv
                 rentedCarDiv.appendChild(showDetailsDiv);
@@ -130,7 +123,6 @@ function displayCarData() {
                 listRentedCarDiv.appendChild(rentedCarDiv);
             }
             
-            
         });
     }
 }
@@ -140,41 +132,24 @@ function returnCar(clickedButtonId){
     console.log("Clicked " + clickedButtonId)
 
     // Retrieved button ID 
-    console.log(matchingRentals); 
     var index = parseInt(clickedButtonId, 10); 
 
-    var rentalData = matchingRentals[index];
-    var returnedCarData = JSON.parse(localStorage.getItem('returnedCar')) || [];
+    // Access the local storage name returnedCar
+    // Remove items at corresponding index 
 
-    returnedCarData.push(rentalData);
-    localStorage.setItem('returnedCar', JSON.stringify(returnedCarData));
-    
-    // Access the local storage named renatalData 
-    // Remove the elements with same carId && fullName && contactNumber
+    console.log("DISPLAYING MATCHING RENTALS (RETURNED CARS)"); 
+    console.log(matchingRentals); 
 
+    if (index >= 0 && index < matchingRentals.length) {
+        matchingRentals.splice(index, 1);
 
-    rentalData = JSON.parse(localStorage.getItem('rentalData')) || [];
+        // Replace the current local storage
+        localStorage.setItem('returnedCar', JSON.stringify(matchingRentals));
+    }
 
-    const carIdToRemove = matchingRentals[index].carId;
-    const fullNameToRemove = matchingRentals[index].fullName;
-    const contactNumberToRemove = matchingRentals[index].contactNumber;
-
-    const updatedRentalData = rentalData.filter((entry) => {
-        return (
-            entry.carId !== carIdToRemove ||
-            entry.fullName !== fullNameToRemove ||
-            entry.contactNumber !== contactNumberToRemove
-        );
-    });
-
-    // Save the updated data back to local storage
-    localStorage.setItem('rentalData', JSON.stringify(updatedRentalData));
-
-    // Everytime pressing the button, refresh the rented car list section 
     reloadRentedCars(); 
-    collectNames(); 
+    getFromLocalStorage();
 
-    
 }
 
 // Function to reload the rented car list 
@@ -185,11 +160,6 @@ function reloadRentedCars(){
 }
 
 
+
 window.onload = loadCarData;
-
-const searchButton = document.getElementById('check-car-button');
-searchButton.addEventListener('click', reloadRentedCars); 
-searchButton.addEventListener('click', collectNames); 
-
-
 
