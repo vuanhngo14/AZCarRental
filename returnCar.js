@@ -13,8 +13,7 @@ function loadCarData() {
 }
 
 function collectNames() {
-
-    event.preventDefault(); 
+    event.preventDefault();
 
     const fullName = document.getElementById('full-name').value;
     const contactNumber = document.getElementById('contact-number').value;
@@ -24,44 +23,46 @@ function collectNames() {
 
     const rentalData = JSON.parse(localStorage.getItem('rentalData')) || [];
 
-    console.log(rentalData); 
+    const matchingRentals = rentalData.filter((entry) => entry.fullName === fullName && entry.contactNumber === contactNumber);
 
-    const matchingCarIds = rentalData.filter((entry) => entry.fullName === fullName && entry.contactNumber === contactNumber).map((entry) => entry.carId);
+    displayCarData(matchingRentals);
+}
 
-    displayCarData(matchingCarIds);
-};
-
-function displayCarData(matchingCarIds) {
-
-    if (matchingCarIds.length === 0) {
+function displayCarData(matchingRentals) {
+    if (matchingRentals.length === 0) {
         alert("No bookings found");
     } else {
-        console.log("running display car function");
-        matchingCarIds.forEach((carId) => {
+        matchingRentals.forEach((entry) => {
 
-            var carIdInt = parseInt(carId, 10);
+            const carIdInt = parseInt(entry.carId, 10); 
 
             const matchingCar = cars.find((car) => car.id === carIdInt);
 
             if (matchingCar) {
-                if (matchingCar) {
-                    // Create and append elements to display car data
-                    const rentedCarDiv = document.createElement('div');
-                    rentedCarDiv.classList.add('rented-car');
-                
-                    // Create showDetailsDiv and its children
-                    const showDetailsDiv = document.createElement('div');
-                    showDetailsDiv.classList.add('show-details');
-                
-                    // Create elements for car data
-                    const carIdLabelSpan = document.createElement('span');
-                    carIdLabelSpan.textContent = "Car ID: ";
-                
-                    const carIdSpan = document.createElement('span');
-                    carIdSpan.id = 'car-id';
-                    carIdSpan.textContent = matchingCar.id;
-                
-                    const carNameLabelSpan = document.createElement('span');
+                const carId = matchingCar.id;
+                const rentalDateTime = entry.rentalDateTime;
+
+
+                const rentedCarDiv = document.createElement('div');
+                rentedCarDiv.classList.add('rented-car');
+
+                const showDetailsDiv = document.createElement('div');
+                showDetailsDiv.classList.add('show-details');
+
+                const carIdLabelSpan = document.createElement('span');
+                carIdLabelSpan.textContent = "Car ID: ";
+
+                const carIdSpan = document.createElement('span');
+                carIdSpan.id = 'car-id';
+                carIdSpan.textContent = carId;
+
+                const rentalDateTimeLabelSpan = document.createElement('span');
+                rentalDateTimeLabelSpan.textContent = "Rental Date & Time: ";
+
+                const rentalDateTimeSpan = document.createElement('span');
+                rentalDateTimeSpan.textContent = rentalDateTime;
+
+                const carNameLabelSpan = document.createElement('span');
                     carNameLabelSpan.textContent = "Make and Model: ";
                 
                     const carNameSpan = document.createElement('span');
@@ -101,8 +102,6 @@ function displayCarData(matchingCarIds) {
                     // Append rentedCarDiv to the list-rented-car div
                     const listRentedCarDiv = document.querySelector('.list-rented-car');
                     listRentedCarDiv.appendChild(rentedCarDiv);
-                }
-                
             }
         });
     }
