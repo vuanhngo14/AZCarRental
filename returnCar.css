@@ -145,6 +145,7 @@ main {
 
 .show-details {
     flex: 1;
+    padding: 10px; 
 }
 
 .show-buttons {

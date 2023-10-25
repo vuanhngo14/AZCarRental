@@ -24,6 +24,8 @@ function collectNames() {
 
     const rentalData = JSON.parse(localStorage.getItem('rentalData')) || [];
 
+    console.log(rentalData); 
+
     const matchingCarIds = rentalData.filter((entry) => entry.fullName === fullName && entry.contactNumber === contactNumber).map((entry) => entry.carId);
 
     displayCarData(matchingCarIds);
@@ -60,7 +62,7 @@ function displayCarData(matchingCarIds) {
                     carIdSpan.textContent = matchingCar.id;
                 
                     const carNameLabelSpan = document.createElement('span');
-                    carNameLabelSpan.textContent = "Name: ";
+                    carNameLabelSpan.textContent = "Make and Model: ";
                 
                     const carNameSpan = document.createElement('span');
                     carNameSpan.id = 'car-name';
