@@ -46,7 +46,7 @@
                     </div>
                     
                     <div class="contact-details">
-                        <button type="submit">Reserve Now</button>
+                        <button id="check-car-button" type="submit">Search for cars</button>
                     </div>
 
                 </form>
@@ -56,24 +56,12 @@
         <div class="list-rented-car">
             <div class="rented-car">
                 <div class="show-details">
-                    <p>Car ID: </p>
-                    <p>Name: </p>
-                    <p>Total Price: </p>
+                    <p>Car ID: <span id="car-id"></span></p>
+                    <p>Name: <span id="car-name"></span></p>
+                    <p>Total Price: <span id="car-price"></span></p>
                 </div>
                 <div class="show-buttons">
-                    <button>Return car</button>
-    
-                </div>
-            </div>
-
-            <div class="rented-car">
-                <div class="show-details">
-                    <p>Car ID: </p>
-                    <p>Name: </p>
-                    <p>Total Price: </p>
-                </div>
-                <div class="show-buttons">
-                    
+                    <button id="return-car" style="display: none">Return car</button>
                 </div>
             </div>
             

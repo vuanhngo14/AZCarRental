@@ -119,33 +119,52 @@ main {
 
 /* STYLING FOR LIST OF RENTED CARS */
 
-.list-rented-car {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding-top: 30px;
-    padding-bottom: 20px; 
-    padding-left: 40px; 
-    padding-right: 40px;
-    margin: 20px;
-    border-radius: 20px;
-    text-align: center;
-    width: 70%;
+.list-rented-car{
+    width: 50%;
     height: auto; 
 }
 
-.rented-car{
-    margin: 20px;
-    display: flex; 
-    justify-content: center;
-    background-color: lightblue;
+.rented-car {
+    border: 1px solid #ccc;
     border-radius: 20px;
+    padding-left: 5%; 
+    margin-bottom: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.rented-car .show-details{
-    text-align: left;
-    margin-left: 5%; 
+.show-details > p{
+    font-weight: bold;
 }
+
+.show-details > span {
+    font-weight: lighter;
+}
+
+.show-details {
+    flex: 1;
+}
+
+.show-buttons {
+    padding-right: 3%;
+    
+}
+
+.show-buttons > button {
+
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+
+/* Additional styling as needed for car ID, Name, and Total Price */
+
 
 
 
