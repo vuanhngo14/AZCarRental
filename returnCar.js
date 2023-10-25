@@ -14,6 +14,7 @@ function loadCarData() {
 }
 
 function collectNames() {
+
     event.preventDefault();
 
     const fullName = document.getElementById('full-name').value;
@@ -34,7 +35,14 @@ function displayCarData() {
     if (matchingRentals.length === 0) {
         alert("No bookings found");
     } else {
+
+        counter = -1; 
+
         matchingRentals.forEach((entry) => {
+
+            // Initiate counter for button ID
+            counter +=1; 
+            console.log(counter); 
 
             const carIdInt = parseInt(entry.carId, 10); 
 
@@ -105,9 +113,13 @@ function displayCarData() {
                 showButtonsDiv.classList.add('show-buttons');
             
                 const returnCarButton = document.createElement('button');
-                returnCarButton.id = 'return-car';
+                returnCarButton.id = counter;
+                returnCarButton.onclick = function () {
+                    const clickedButtonId = this.id;
+                    returnCar(clickedButtonId); 
+                };               
                 returnCarButton.textContent = 'Return car';
-            
+
                 // Append the elements to rentedCarDiv
                 rentedCarDiv.appendChild(showDetailsDiv);
                 rentedCarDiv.appendChild(showButtonsDiv);
@@ -123,13 +135,61 @@ function displayCarData() {
     }
 }
 
-function returnCar(){
+function returnCar(clickedButtonId){
+
+    console.log("Clicked " + clickedButtonId)
+
+    // Retrieved button ID 
+    console.log(matchingRentals); 
+    var index = parseInt(clickedButtonId, 10); 
+
+    var rentalData = matchingRentals[index];
+    var returnedCarData = JSON.parse(localStorage.getItem('returnedCar')) || [];
+
+    returnedCarData.push(rentalData);
+    localStorage.setItem('returnedCar', JSON.stringify(returnedCarData));
+    
+    // Access the local storage named renatalData 
+    // Remove the elements with same carId && fullName && contactNumber
+
+
+    rentalData = JSON.parse(localStorage.getItem('rentalData')) || [];
+
+    const carIdToRemove = matchingRentals[index].carId;
+    const fullNameToRemove = matchingRentals[index].fullName;
+    const contactNumberToRemove = matchingRentals[index].contactNumber;
+
+    const updatedRentalData = rentalData.filter((entry) => {
+        return (
+            entry.carId !== carIdToRemove ||
+            entry.fullName !== fullNameToRemove ||
+            entry.contactNumber !== contactNumberToRemove
+        );
+    });
+
+    // Save the updated data back to local storage
+    localStorage.setItem('rentalData', JSON.stringify(updatedRentalData));
+
+    // Everytime pressing the button, refresh the rented car list section 
+    reloadRentedCars(); 
+    collectNames(); 
+
+    
+}
+
+// Function to reload the rented car list 
+function reloadRentedCars(){
+    const rentedCarList = document.getElementById('rented-car');
+    rentedCarList.innerHTML = ''; 
 
 }
 
 
-
-// Onload
-
 window.onload = loadCarData;
+
+const searchButton = document.getElementById('check-car-button');
+searchButton.addEventListener('click', reloadRentedCars); 
+searchButton.addEventListener('click', collectNames); 
+
+
 

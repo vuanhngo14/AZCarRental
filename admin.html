@@ -26,6 +26,26 @@
 
     <main>
 
+        <!-- Main part -->
+        <h2> Admin Login</h2>
+        <p>Not an admin? Redirect back to our main page <a href="index.html">here</a></p>
+
+        <button id="login-button">Login</button>
+
+        <div id="login-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="close-popup">&times;</span>
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
 
     </main>
 
