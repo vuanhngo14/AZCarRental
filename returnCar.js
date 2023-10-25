@@ -12,30 +12,33 @@ function loadCarData() {
         });
 }
 
-document.getElementById('rental-form').addEventListener('submit', function (event) {
-    event.preventDefault();
+function collectNames() {
+
+    event.preventDefault(); 
 
     const fullName = document.getElementById('full-name').value;
     const contactNumber = document.getElementById('contact-number').value;
 
-    // Retrieve user data from local storage
+    console.log(fullName); 
+    console.log(contactNumber); 
+
     const rentalData = JSON.parse(localStorage.getItem('rentalData')) || [];
 
-    // Find car IDs matching the full name and contact number
     const matchingCarIds = rentalData.filter((entry) => entry.fullName === fullName && entry.contactNumber === contactNumber).map((entry) => entry.carId);
+    console.log(matchingCarIds.length); 
 
-    // Display car details for each matching car ID
     displayCarData(matchingCarIds);
-});
+};
 
 function displayCarData(matchingCarIds) {
 
     if (matchingCarIds.length === 0) {
         alert("No bookings found");
     } else {
+        console.log("running display car function");
         matchingCarIds.forEach((carId) => {
             const matchingCar = cars.find((car) => car.id === carId);
-            
+
             if (matchingCar) {
                 // Create and append elements to display car data
                 const rentedCarDiv = document.createElement('div');
